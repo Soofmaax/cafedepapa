@@ -1,0 +1,45 @@
+/*
+Theme Name: Storefront Child
+Description: Thème enfant sur-mesure pour Café de Papá
+Author: Dev
+Template: storefront
+Version: 1.0.0
+*/
+
+/* ==========================================================================
+   Café de Papá — styles globaux du thème enfant
+   ========================================================================== */
+
+:root {
+    --coffee-50: #faf6f2;
+    --coffee-100: #f1e7dc;
+    --coffee-200: #e2ccba;
+    --coffee-300: #cda989;
+    --coffee-400: #b8835f;
+    --coffee-500: #9a6638;
+    --coffee-600: #7d4f2a;
+    --coffee-700: #5f3d22;
+    --coffee-800: #3d2817;
+    --coffee-900: #241609;
+    --coffee-950: #140b03;
+
+    --cream-50: #fdfcf9;
+    --cream-100: #faf6ee;
+    --cream-200: #f4ebd9;
+    --cream-300: #ecdcbf;
+    --cream-400: #dcc59a;
+    --cream-500: #c9a872;
+
+    --terracotta-500: #bd6b47;
+    --forest-600: #2f4a30;
+    --gold-500: #b08a32;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream-50);
+    color: var(--coffee-900);
+}
