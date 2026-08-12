@@ -743,6 +743,10 @@ body.menu-open {
   margin-top: 4rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -759,12 +763,20 @@ body.menu-open {
   margin-top: 2rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .grid {
@@ -888,8 +900,16 @@ body.menu-open {
   gap: 0.25rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
@@ -929,6 +949,10 @@ body.menu-open {
   border-top-width: 1px;
 }
 
+.border-coffee-200\/60 {
+  border-color: rgb(226 204 186 / 0.6);
+}
+
 .border-coffee-300\/40 {
   border-color: rgb(205 169 137 / 0.4);
 }
@@ -947,6 +971,11 @@ body.menu-open {
 
 .border-gold-500\/30 {
   border-color: rgb(176 138 50 / 0.3);
+}
+
+.bg-coffee-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 231 220 / var(--tw-bg-opacity, 1));
 }
 
 .bg-coffee-950 {
@@ -1050,6 +1079,14 @@ body.menu-open {
   padding-top: 0.5rem;
 }
 
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1077,6 +1114,10 @@ body.menu-open {
   line-height: 2.5rem;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
 .text-\[12px\] {
   font-size: 12px;
 }
@@ -1092,6 +1133,11 @@ body.menu-open {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -1144,9 +1190,19 @@ body.menu-open {
   color: rgb(154 102 56 / var(--tw-text-opacity, 1));
 }
 
+.text-coffee-600 {
+  --tw-text-opacity: 1;
+  color: rgb(125 79 42 / var(--tw-text-opacity, 1));
+}
+
 .text-coffee-700 {
   --tw-text-opacity: 1;
   color: rgb(95 61 34 / var(--tw-text-opacity, 1));
+}
+
+.text-coffee-800 {
+  --tw-text-opacity: 1;
+  color: rgb(61 40 23 / var(--tw-text-opacity, 1));
 }
 
 .text-coffee-900 {
@@ -1291,8 +1347,18 @@ body.menu-open {
   color: rgb(201 162 74 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-terracotta-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(162 86 54 / var(--tw-text-opacity, 1));
+}
+
 .group:hover .group-hover\:w-full {
   width: 100%;
+}
+
+.group\/btn:hover .group-hover\/btn\:translate-x-1 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:translate-x-1 {
@@ -1300,7 +1366,16 @@ body.menu-open {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:translate-x-1\.5 {
+  --tw-translate-x: 0.375rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1373,6 +1448,10 @@ body.menu-open {
 
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-\[1\.15fr_1fr\] {
