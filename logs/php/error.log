@@ -1,9 +1,0 @@
-[31-Jul-2026 18:25:01 UTC] WordPress database error Table 'local.wp_woocommerce_attribute_taxonomies' doesn't exist for query SELECT * FROM wp_woocommerce_attribute_taxonomies WHERE attribute_name != '' ORDER BY attribute_name ASC; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/woocommerce/woocommerce.php'), WC, WooCommerce::instance, WooCommerce->__construct, WooCommerce->init_hooks, Automattic\WooCommerce\Internal\ProductAttributes\VisualAttributeTermAdmin->register, wc_get_attribute_taxonomies
-[01-Aug-2026 10:15:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function cmplz_wsc_scanner::wsc_checks_retrieve(), 0 passed in C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-includes\class-wp-hook.php on line 341 and exactly 1 expected in C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-content\plugins\complianz-gdpr\websitescan\class-wsc-scanner.php:858
-Stack trace:
-#0 C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-includes\class-wp-hook.php(341): cmplz_wsc_scanner->wsc_checks_retrieve()
-#1 C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
-#2 C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
-#3 C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-cron.php(191): do_action_ref_array('cmplz_wsc_check...', Array)
-#4 {main}
-  thrown in C:\Users\Sarah Connors\Local Sites\cafedepapa\app\public\wp-content\plugins\complianz-gdpr\websitescan\class-wsc-scanner.php on line 858
