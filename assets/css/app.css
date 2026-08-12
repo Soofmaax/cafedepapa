@@ -751,6 +751,14 @@ body.menu-open {
   margin-top: 5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -791,6 +799,10 @@ body.menu-open {
   aspect-ratio: 16/10;
 }
 
+.aspect-\[16\/11\] {
+  aspect-ratio: 16/11;
+}
+
 .aspect-\[3\/4\] {
   aspect-ratio: 3/4;
 }
@@ -829,6 +841,10 @@ body.menu-open {
 
 .w-full {
   width: 100%;
+}
+
+.w-px {
+  width: 1px;
 }
 
 .max-w-2xl {
@@ -908,6 +924,10 @@ body.menu-open {
   gap: 3rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -918,6 +938,10 @@ body.menu-open {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-9 {
@@ -978,6 +1002,11 @@ body.menu-open {
   background-color: rgb(241 231 220 / var(--tw-bg-opacity, 1));
 }
 
+.bg-coffee-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 22 9 / var(--tw-bg-opacity, 1));
+}
+
 .bg-coffee-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 11 3 / var(--tw-bg-opacity, 1));
@@ -996,6 +1025,10 @@ body.menu-open {
 .bg-gold-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(176 138 50 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gold-500\/25 {
+  background-color: rgb(176 138 50 / 0.25);
 }
 
 .bg-transparent {
@@ -1112,6 +1145,11 @@ body.menu-open {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-\[11px\] {
@@ -1248,6 +1286,10 @@ body.menu-open {
 .text-gold-400 {
   --tw-text-opacity: 1;
   color: rgb(201 162 74 / var(--tw-text-opacity, 1));
+}
+
+.text-gold-500\/40 {
+  color: rgb(176 138 50 / 0.4);
 }
 
 .text-terracotta-600 {
@@ -1430,6 +1472,10 @@ body.menu-open {
     margin-top: 7rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:inline-block {
     display: inline-block;
   }
@@ -1446,6 +1492,10 @@ body.menu-open {
     aspect-ratio: 5/6;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -1458,8 +1508,24 @@ body.menu-open {
     grid-template-columns: 1.15fr 1fr;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lg\:gap-14 {
+    gap: 3.5rem;
+  }
+
   .lg\:gap-20 {
     gap: 5rem;
+  }
+
+  .lg\:gap-28 {
+    gap: 7rem;
   }
 
   .lg\:gap-8 {
@@ -1469,6 +1535,11 @@ body.menu-open {
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:py-32 {
@@ -1482,6 +1553,11 @@ body.menu-open {
 
   .lg\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-6xl {
