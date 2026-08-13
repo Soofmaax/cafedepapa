@@ -16,9 +16,53 @@
   ::selection {
     @apply bg-coffee-800 text-cream-100;
   }
+
+  #cafes,
+  #origine,
+  #histoire,
+  #engagements,
+  #contact {
+    scroll-margin-top: 6rem;
+  }
+
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid theme('colors.gold.400');
+  outline-offset: 4px;
 }
 
 @layer components {
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .site-header.is-scrolled {
+    @apply bg-coffee-950/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(201,162,74,0.18)];
+  }
+
+  .site-header.is-scrolled .site-header__brand,
+  .site-header.is-scrolled .site-header__toggle,
+  .site-header.is-menu-open .site-header__toggle {
+    @apply text-cream-100;
+  }
+
+  .site-header.is-scrolled .site-header__nav-link {
+    @apply text-cream-200 hover:text-cream-50;
+  }
+
+  .site-header.is-menu-open .site-header__mobile-menu {
+    @apply max-h-[480px] opacity-100;
+  }
+
+  .site-header.is-menu-open .site-header__menu-icon {
+    @apply hidden;
+  }
+
+  .site-header.is-menu-open .site-header__close-icon {
+    @apply block;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -75,5 +119,11 @@
 
   .img-zoom img {
     transition: none;
+  }
+
+  .site-header,
+  .site-header * {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
   }
 }
