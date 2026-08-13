@@ -63,3 +63,40 @@ function cdp_display_acf_fields() {
         echo '</div>';
     }
 }
+
+
+// Enregistrer les inscriptions à la newsletter depuis la landing page
+add_action( 'admin_post_nopriv_cdp_newsletter_subscribe', 'cdp_handle_newsletter_subscription' );
+add_action( 'admin_post_cdp_newsletter_subscribe', 'cdp_handle_newsletter_subscription' );
+
+function cdp_handle_newsletter_subscription() {
+    $redirect_url = home_url( '/#contact' );
+
+    if (
+        ! isset( $_POST['cdp_newsletter_nonce'] ) ||
+        ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cdp_newsletter_nonce'] ) ), 'cdp_newsletter_subscribe' )
+    ) {
+        wp_safe_redirect( add_query_arg( 'newsletter', 'error', $redirect_url ) );
+        exit;
+    }
+
+    $email = isset( $_POST['newsletter_email'] ) ? sanitize_email( wp_unslash( $_POST['newsletter_email'] ) ) : '';
+
+    if ( ! is_email( $email ) ) {
+        wp_safe_redirect( add_query_arg( 'newsletter', 'invalid', $redirect_url ) );
+        exit;
+    }
+
+    $subscribers   = get_option( 'cdp_newsletter_subscribers', array() );
+    $subscribers   = is_array( $subscribers ) ? $subscribers : array();
+    $normalized    = strtolower( $email );
+    $existing_list = array_map( 'strtolower', $subscribers );
+
+    if ( ! in_array( $normalized, $existing_list, true ) ) {
+        $subscribers[] = $email;
+        update_option( 'cdp_newsletter_subscribers', $subscribers, false );
+    }
+
+    wp_safe_redirect( add_query_arg( 'newsletter', 'success', $redirect_url ) );
+    exit;
+}

@@ -9,6 +9,7 @@
     <?php get_template_part( 'template-parts/commitments-section' ); ?>
     <?php get_template_part( 'template-parts/peru-banner' ); ?>
     <?php get_template_part( 'template-parts/paris-section' ); ?>
+    <?php get_template_part( 'template-parts/newsletter' ); ?>
 </main>
 
 <?php get_footer(); ?>

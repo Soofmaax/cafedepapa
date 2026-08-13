@@ -669,6 +669,18 @@ body.menu-open {
   transform: scale(1.05);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .fixed {
   position: fixed;
 }
@@ -903,8 +915,16 @@ body.menu-open {
   max-width: 80rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .max-w-md {
   max-width: 28rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .-translate-x-1\/2 {
@@ -968,6 +988,10 @@ body.menu-open {
   gap: 0.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1029,6 +1053,10 @@ body.menu-open {
   border-color: rgb(61 40 23 / 0.6);
 }
 
+.border-cream-100\/30 {
+  border-color: rgb(250 246 238 / 0.3);
+}
+
 .border-cream-100\/40 {
   border-color: rgb(250 246 238 / 0.4);
 }
@@ -1063,6 +1091,10 @@ body.menu-open {
 .bg-coffee-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 11 3 / var(--tw-bg-opacity, 1));
+}
+
+.bg-coffee-950\/40 {
+  background-color: rgb(20 11 3 / 0.4);
 }
 
 .bg-coffee-950\/55 {
@@ -1363,8 +1395,21 @@ body.menu-open {
   color: rgb(162 86 54 / var(--tw-text-opacity, 1));
 }
 
+.placeholder-cream-200\/40::-moz-placeholder {
+  color: rgb(244 235 217 / 0.4);
+}
+
+.placeholder-cream-200\/40::placeholder {
+  color: rgb(244 235 217 / 0.4);
+}
+
 .opacity-0 {
   opacity: 0;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .transition-\[max-height\2c opacity\] {
@@ -1449,6 +1494,11 @@ body.menu-open {
   background-color: rgb(253 252 249 / 0.1);
 }
 
+.hover\:bg-gold-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 162 74 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-gold-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(176 138 50 / var(--tw-bg-opacity, 1));
@@ -1472,6 +1522,11 @@ body.menu-open {
 .hover\:text-terracotta-600:hover {
   --tw-text-opacity: 1;
   color: rgb(162 86 54 / var(--tw-text-opacity, 1));
+}
+
+.focus\:border-gold-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(176 138 50 / var(--tw-border-opacity, 1));
 }
 
 .group:hover .group-hover\:w-full {
