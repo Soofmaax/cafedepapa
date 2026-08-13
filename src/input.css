@@ -16,6 +16,20 @@
   ::selection {
     @apply bg-coffee-800 text-cream-100;
   }
+
+  #cafes,
+  #origine,
+  #histoire,
+  #engagements,
+  #contact {
+    scroll-margin-top: 6rem;
+  }
+
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid theme('colors.gold.400');
+  outline-offset: 4px;
 }
 
 @layer components {

@@ -584,6 +584,14 @@ body {
   color: rgb(250 246 238 / var(--tw-text-opacity, 1));
 }
 
+#cafes,
+  #origine,
+  #histoire,
+  #engagements,
+  #contact {
+  scroll-margin-top: 6rem;
+}
+
 body.menu-open {
   overflow: hidden;
 }
@@ -966,6 +974,10 @@ body.menu-open {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-col {
@@ -1471,6 +1483,10 @@ body.menu-open {
   outline-offset: 2px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-\[max-height\2c opacity\] {
   transition-property: max-height,opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1505,6 +1521,11 @@ body.menu-open {
 
 .will-change-transform {
   will-change: transform;
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid #c9a24a;
+  outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {

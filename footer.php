@@ -1,4 +1,9 @@
 <?php
+if ( ! cdp_is_landing_page() ) {
+    require get_template_directory() . '/footer.php';
+    return;
+}
+
 $landing_page_url = trailingslashit( home_url( '/' ) );
 $footer_columns   = array(
     array(
@@ -72,7 +77,7 @@ $footer_columns   = array(
 
         <div class="mt-14 border-t border-coffee-800/60 pt-7">
             <p class="text-center text-xs text-cream-200/50">
-                © 2026 Café de Papá — Tous droits réservés
+                © <?php echo esc_html( wp_date( 'Y' ) ); ?> Café de Papá — Tous droits réservés
             </p>
         </div>
     </div>

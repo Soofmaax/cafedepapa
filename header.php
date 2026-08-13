@@ -1,3 +1,9 @@
+<?php
+if ( ! cdp_is_landing_page() ) {
+    require get_template_directory() . '/header.php';
+    return;
+}
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

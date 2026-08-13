@@ -3,19 +3,51 @@
 // Charger les styles du thème parent Storefront
 add_action( 'wp_enqueue_scripts', 'storefront_child_enqueue_styles' );
 
-function storefront_child_enqueue_styles() {
+function cdp_is_landing_page() {
+    if ( ! is_front_page() ) {
+        return false;
+    }
 
+    if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
+        return false;
+    }
+
+    if ( function_exists( 'is_cart' ) && is_cart() ) {
+        return false;
+    }
+
+    if ( function_exists( 'is_checkout' ) && is_checkout() ) {
+        return false;
+    }
+
+    if ( function_exists( 'is_account_page' ) && is_account_page() ) {
+        return false;
+    }
+
+    return true;
+}
+
+function storefront_child_enqueue_styles() {
     wp_enqueue_style(
         'storefront-parent-style',
         get_template_directory_uri() . '/style.css'
     );
+
+    if ( ! cdp_is_landing_page() ) {
+        return;
+    }
+
+    $stylesheet_path = get_stylesheet_directory() . '/assets/css/app.css';
+    $script_path     = get_stylesheet_directory() . '/assets/js/main.js';
+    $theme           = wp_get_theme();
+    $theme_version   = $theme->get( 'Version' );
 
     // CSS personnalisé de la landing page
     wp_enqueue_style(
         'cafedepapa-landing',
         get_stylesheet_directory_uri() . '/assets/css/app.css',
         array( 'storefront-parent-style' ),
-        '1.0.0'
+        file_exists( $stylesheet_path ) ? (string) filemtime( $stylesheet_path ) : $theme_version
     );
 
     // JavaScript personnalisé
@@ -23,7 +55,7 @@ function storefront_child_enqueue_styles() {
         'cafedepapa-main',
         get_stylesheet_directory_uri() . '/assets/js/main.js',
         array(),
-        '1.0.0',
+        file_exists( $script_path ) ? (string) filemtime( $script_path ) : $theme_version,
         true
     );
 }
@@ -33,6 +65,9 @@ function storefront_child_enqueue_styles() {
 add_action( 'woocommerce_single_product_summary', 'cdp_display_acf_fields', 25 );
 
 function cdp_display_acf_fields() {
+    if ( ! function_exists( 'get_field' ) ) {
+        return;
+    }
 
     $origine   = get_field( 'texte_dorigine' );
     $notes     = get_field( 'notes_aromatiques' );
