@@ -831,6 +831,10 @@ body.menu-open {
   height: 100svh;
 }
 
+.h-\[70vh\] {
+  height: 70vh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -841,6 +845,10 @@ body.menu-open {
 
 .max-h-0 {
   max-height: 0px;
+}
+
+.min-h-\[420px\] {
+  min-height: 420px;
 }
 
 .min-h-\[640px\] {
@@ -1038,6 +1046,10 @@ body.menu-open {
 .bg-coffee-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 11 3 / var(--tw-bg-opacity, 1));
+}
+
+.bg-coffee-950\/55 {
+  background-color: rgb(20 11 3 / 0.55);
 }
 
 .bg-cream-100 {
@@ -1363,6 +1375,10 @@ body.menu-open {
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.will-change-transform {
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {

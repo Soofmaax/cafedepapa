@@ -7,6 +7,7 @@
     <?php get_template_part( 'template-parts/products-section' ); ?>
     <?php get_template_part( 'template-parts/coffee-journey' ); ?>
     <?php get_template_part( 'template-parts/commitments-section' ); ?>
+    <?php get_template_part( 'template-parts/peru-banner' ); ?>
 </main>
 
 <?php get_footer(); ?>
