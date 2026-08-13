@@ -8,6 +8,7 @@
     <?php get_template_part( 'template-parts/coffee-journey' ); ?>
     <?php get_template_part( 'template-parts/commitments-section' ); ?>
     <?php get_template_part( 'template-parts/peru-banner' ); ?>
+    <?php get_template_part( 'template-parts/paris-section' ); ?>
 </main>
 
 <?php get_footer(); ?>

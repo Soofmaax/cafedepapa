@@ -718,6 +718,14 @@ body.menu-open {
   z-index: 50;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -777,6 +785,10 @@ body.menu-open {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .block {
@@ -1038,6 +1050,11 @@ body.menu-open {
   background-color: rgb(226 204 186 / 0.6);
 }
 
+.bg-coffee-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 246 242 / var(--tw-bg-opacity, 1));
+}
+
 .bg-coffee-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(36 22 9 / var(--tw-bg-opacity, 1));
@@ -1111,6 +1128,11 @@ body.menu-open {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .px-8 {
@@ -1413,6 +1435,11 @@ body.menu-open {
   border-color: rgb(176 138 50 / var(--tw-border-opacity, 1));
 }
 
+.hover\:bg-coffee-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 40 23 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-cream-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 252 249 / var(--tw-bg-opacity, 1));
@@ -1515,6 +1542,14 @@ body.menu-open {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
+  }
+
   .lg\:col-span-5 {
     grid-column: span 5 / span 5;
   }
@@ -1573,6 +1608,10 @@ body.menu-open {
 
   .lg\:grid-cols-\[1\.15fr_1fr\] {
     grid-template-columns: 1.15fr 1fr;
+  }
+
+  .lg\:grid-cols-\[1fr_1\.15fr\] {
+    grid-template-columns: 1fr 1.15fr;
   }
 
   .lg\:flex-row {
